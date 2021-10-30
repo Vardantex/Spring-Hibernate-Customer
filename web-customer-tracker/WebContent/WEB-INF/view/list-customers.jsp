@@ -17,7 +17,7 @@
 
 <div id="wrapper">
 	<div id="header">
-		<h2>VRM - Customer Relationship Manager</h2>
+		<h2>CRM - Customer Relationship Manager</h2>
 	</div>
 </div>
 
