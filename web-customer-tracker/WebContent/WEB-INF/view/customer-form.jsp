@@ -29,7 +29,11 @@ customer form placeholder
 	<div id="container">
 		<h3>Save Customer</h3>
 		
+		<!-- Form load: Get/ Form Submit: Set -->
 		<form:form action="saveCustomer" modelAttribute="customer" method="POST">
+		
+		<!-- Associate data with customer id [Sets users id] -->
+		<form:hidden path="id" />
 		
 		<table>
 			<tbody>
