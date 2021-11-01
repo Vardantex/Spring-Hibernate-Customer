@@ -25,17 +25,31 @@ public class CustomerDAOImpl implements CustomerDAO {
 		//Get the current hibernate session 
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		//create a query 
+		//create a query and sort
 		Query<Customer> theQuery = 
-				currentSession.createQuery("from Customer", Customer.class);
+				currentSession.createQuery("from Customer order by lastName",
+						Customer.class);
 		
-		//execute query and get result list 
+		//execute query and get result list
 		List<Customer> customers = theQuery.getResultList();
 		
 		//return the results 
 		
 		
 		return customers;
+	}
+
+
+	@Override
+	public void saveCustomer(Customer theCustomer) {
+		
+		//Get current hibernate session 
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		//save the customer
+		currentSession.save(theCustomer);
+		
+		
 	}
 
 }

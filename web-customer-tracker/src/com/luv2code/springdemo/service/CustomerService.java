@@ -8,6 +8,8 @@ public interface CustomerService {
 
 	//Create a method to get customers 
 	public List<Customer> getCustomers();
+
+	public void saveCustomer(Customer theCustomer);
 	
 	
 }
